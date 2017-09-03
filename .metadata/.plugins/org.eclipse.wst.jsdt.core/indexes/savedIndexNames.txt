@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/broberson7801/SD/Java/stsworkspace/GroupPair/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4187684592.index
+2473859874.index
+1829791904.index
+1557002417.index
+1984958850.index
+3650600189.index

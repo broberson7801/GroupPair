@@ -1,0 +1,14 @@
+package entities;
+
+@Entity
+public class Group {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="group_name")
+	private String groupName;
+	
+
+}

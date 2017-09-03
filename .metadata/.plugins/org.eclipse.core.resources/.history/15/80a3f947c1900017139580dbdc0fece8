@@ -1,0 +1,36 @@
+package entities;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+public class Flock {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "flock_name")
+	private String flockName;
+
+	private String task;
+
+	private boolean complete;
+
+	@Column(name = "task_description")
+	private String taskDescription;
+
+	private int size;
+
+	@OneToMany(mappedBy = "flock")
+	private List<UserFlock> userFLockInFlock;
+
+	
+}

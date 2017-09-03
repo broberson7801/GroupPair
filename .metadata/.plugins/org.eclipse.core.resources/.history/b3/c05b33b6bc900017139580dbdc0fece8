@@ -1,0 +1,78 @@
+package entities;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Group {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "group_name")
+	private String groupName;
+
+	private String task;
+
+	private boolean complete;
+
+	@Column(name = "task_description")
+	private String taskDescription;
+	
+	private int size;
+
+	@OneToMany(mappedBy="group")
+	private List<UserGroup> userGroupInGroup;
+
+	public String getGroupName() {
+		return groupName;
+	}
+
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+
+	public String getTask() {
+		return task;
+	}
+
+	public void setTask(String task) {
+		this.task = task;
+	}
+
+	public boolean isComplete() {
+		return complete;
+	}
+
+	public void setComplete(boolean complete) {
+		this.complete = complete;
+	}
+
+	public String getTaskDescription() {
+		return taskDescription;
+	}
+
+	public void setTaskDescription(String taskDescription) {
+		this.taskDescription = taskDescription;
+	}
+
+	public List<UserGroup> getUserGroupInGroup() {
+		return userGroupInGroup;
+	}
+
+	public void setUserGroupInGroup(List<UserGroup> userGroupInGroup) {
+		this.userGroupInGroup = userGroupInGroup;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+}
