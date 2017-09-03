@@ -9,7 +9,8 @@
 		<!-- Entities go here between the class tags -->
 		<class>entites.User</class>
 		<class>entites.GroupUser</class>
-		<class>entites.Group</class>
+		<class>entites.Flock</class>
+		<class>entites.FlockMember</class>
 		
 
 

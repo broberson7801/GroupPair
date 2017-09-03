@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +26,9 @@ public class UserFlock {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "flock_id")
 	private Flock flock;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	private List<FlockMember> flockMembers;
 
 	public User getUser() {
 		return user;
